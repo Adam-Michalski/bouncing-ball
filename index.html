@@ -9,6 +9,12 @@
 <body>
   <canvas id="canvas"></canvas>
 
-  <script src="main.js"></script>
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="dist/app.js"></script>
+
+  <script>
+    System.import('boot')
+      .then(null, console.error.bind(console));
+  </script>
 </body>
 </html>
